@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ProducerGPT autonomous creative studio demo."
+    />
+    <title>ProducerGPT | Autonomous Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="masthead">
+        <div>
+          <p class="eyebrow">Autonomous Creative Agents</p>
+          <h1>ProducerGPT</h1>
+        </div>
+        <div class="service-state" id="service-state" aria-live="polite">
+          <span class="status-dot"></span>
+          <span>Ready</span>
+        </div>
+      </header>
+
+      <section class="brief-panel" aria-labelledby="brief-title">
+        <div class="section-heading">
+          <p class="eyebrow">Creative Brief</p>
+          <h2 id="brief-title">What story should the studio produce?</h2>
+        </div>
+        <label class="sr-only" for="movie-idea">Movie idea</label>
+        <textarea
+          id="movie-idea"
+          name="movie-idea"
+          maxlength="4000"
+          placeholder="A movie about the rise of Shivaji Maharaj."
+          required
+        ></textarea>
+        <div class="brief-actions">
+          <p class="request-status" id="request-status" aria-live="polite">Awaiting a concept.</p>
+          <button class="generate-button" id="generate-button" type="button">
+            <span class="button-label">Generate Package</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Generation dashboard">
+        <section class="timeline-panel" aria-labelledby="timeline-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Autonomous Run</p>
+              <h2 id="timeline-title">Agent Timeline</h2>
+            </div>
+            <span class="run-status" id="run-status">Idle</span>
+          </div>
+          <ol class="agent-timeline" id="agent-timeline">
+            <li data-stage="research">
+              <span class="stage-marker">01</span>
+              <span class="stage-name">Research Agent</span>
+              <span class="stage-status">Queued</span>
+            </li>
+            <li data-stage="ceo">
+              <span class="stage-marker">02</span>
+              <span class="stage-name">CEO Agent</span>
+              <span class="stage-status">Queued</span>
+            </li>
+            <li data-stage="planner">
+              <span class="stage-marker">03</span>
+              <span class="stage-name">Planner</span>
+              <span class="stage-status">Queued</span>
+            </li>
+            <li data-stage="creative">
+              <span class="stage-marker">04</span>
+              <span class="stage-name">Creative Pool</span>
+              <span class="stage-status">Queued</span>
+            </li>
+            <li data-stage="studio">
+              <span class="stage-marker">05</span>
+              <span class="stage-name">Studio</span>
+              <span class="stage-status">Queued</span>
+            </li>
+            <li data-stage="copilot">
+              <span class="stage-marker">06</span>
+              <span class="stage-name">Creator Copilot</span>
+              <span class="stage-status">Queued</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="metrics-panel" aria-labelledby="metrics-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Performance</p>
+              <h2 id="metrics-title">Workflow Metrics</h2>
+            </div>
+          </div>
+          <dl class="metrics-list" id="metrics-list">
+            <div><dt>Total runtime</dt><dd>--</dd></div>
+            <div><dt>Research</dt><dd>--</dd></div>
+            <div><dt>CEO review</dt><dd>--</dd></div>
+            <div><dt>Planning</dt><dd>--</dd></div>
+            <div><dt>Creative pool</dt><dd>--</dd></div>
+          </dl>
+        </section>
+      </section>
+
+      <section class="output-panel" aria-labelledby="output-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Production Package</p>
+            <h2 id="output-title">Final JSON Output</h2>
+          </div>
+          <span class="output-state" id="output-state">No result</span>
+        </div>
+        <pre id="json-output" tabindex="0">{}</pre>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
