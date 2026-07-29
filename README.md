@@ -150,4 +150,4 @@ frontend/
 
 ## Live Deployed Link
 
-Open Live Link at `https://producergpt-1.onrender.com/demo/`.
+Open Live Link at https://producergpt-1.onrender.com/demo/.
