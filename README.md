@@ -148,6 +148,6 @@ frontend/
     script.js                      # Fetch-driven generation workflow
 ```
 
-## Screenshots
+## Live Deployed Link
 
-Screenshot placeholder: add the `/demo` dashboard capture here before submission.
+Open Live Link at `https://producergpt-1.onrender.com/demo/`.
